@@ -1,10 +1,14 @@
 import React from 'react';
 
-const ButtonComponent = () => {
+type ButtonPropsType = {
+    onClick: ()=> void
+}
+
+const ButtonComponent:React.FC<ButtonPropsType> = ({onClick}) => {
     return (
-        <div>
-            
-        </div>
+        <button onClick={onClick}>
+            Click me
+        </button>
     );
 };
 
