@@ -1,13 +1,14 @@
 import React from 'react';
 
 type ButtonPropsType = {
-    onClick: ()=> void
+    onClick: ()=> void,
+    name: string
 }
 
-const ButtonComponent:React.FC<ButtonPropsType> = ({onClick}) => {
+const ButtonComponent:React.FC<ButtonPropsType> = ({onClick, name}) => {
     return (
         <button onClick={onClick}>
-            Click me
+            {name}
         </button>
     );
 };

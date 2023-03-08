@@ -18,7 +18,7 @@ const Main = () => {
     return (
         <MainWrapper>
             <TestText>{text}</TestText>
-            <ButtonComponent onClick={()=> setText('ты лох')}/>
+            <ButtonComponent onClick={()=> setText('ты лох')} name={'Click me'}/>
         </MainWrapper>
     );
 };
