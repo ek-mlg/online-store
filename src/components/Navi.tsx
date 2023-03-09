@@ -7,6 +7,7 @@ const StyledNav = styled.nav`
   display: flex;
   gap: 15px;
   background: lightskyblue;
+  margin-right: 100px;
 `
 
 const StyledNavLink = styled(NavLink)`

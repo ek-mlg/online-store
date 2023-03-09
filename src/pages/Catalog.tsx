@@ -6,6 +6,12 @@ import img1 from "../assets/img/1.webp"
 const CatalogWrapper = styled.main`
   min-height: 100vh;
   background: #f0fff1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 25px;
 `
 
 const products = {

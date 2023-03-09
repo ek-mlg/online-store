@@ -7,6 +7,7 @@ const HeaderWrapper = styled.header`
   width: 100%;
   height: 80px;
   display: flex;
+  justify-content: flex-end;
 `
 
 const Header = () => {
