@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {PATH} from "../pages/Pages";
+import {path} from "../pages/Pages";
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
@@ -19,11 +19,11 @@ const StyledNavLink = styled(NavLink)`
 const Navi = () => {
     return (
         <StyledNav>
-            <StyledNavLink to={PATH.MAIN}
+            <StyledNavLink to={path.main}
             >
                 Main
             </StyledNavLink>
-            <StyledNavLink to={PATH.CATALOG}
+            <StyledNavLink to={path.catalog}
             >
                 Catalog
             </StyledNavLink>
