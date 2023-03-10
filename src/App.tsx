@@ -1,17 +1,18 @@
 import React from 'react';
-import './App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import {Pages} from "./pages/Pages";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Test</h1>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>Ilya branch test commit 1</p>
-    </div>
-  );
+const App = () => {
+    //  Я установил уже редакс, рауты, uuid, предлагаю также использовать Styled Components тут, в реальном проекте, интересно
+    //  посмотреть удобнее ли он модулей, также уже создал папку страниц и одноименный компонент для роута, удачи нам :)
+    return (
+        <>
+            <Header/>
+                <Pages/>
+            <Footer/>
+        </>
+    );
 }
 
 export default App;
