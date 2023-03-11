@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import Item from "../components/Item";
-import img1 from "../assets/img/1.webp"
+import {useSelector} from "react-redux";
+import {AppRootStateType} from "../state/store";
+import {TestType} from "../state/item-reducer";
 
 const CatalogWrapper = styled.main`
   min-height: 100vh;
@@ -14,17 +16,9 @@ const CatalogWrapper = styled.main`
   margin-top: 25px;
 `
 
-const products = {
-    items: [
-        {id: "1", img: img1, name: "iPhone 14 Pro Max", price: "1250$", description: "description1"},
-        {id: "2", img: img1, name: "item2", price: "460$", description: "description2"},
-        {id: "3", img: img1, name: "item3", price: "190$", description: "description3"},
-        {id: "4", img: img1, name: "item4", price: "100$", description: "description4"},
-        {id: "5", img: img1, name: "item5", price: "490$", description: "description5"}
-    ]
-}
-
 const Catalog = () => {
+
+    const products = useSelector<AppRootStateType, TestType>(state => state.item.products)
 
     return (
         <CatalogWrapper>

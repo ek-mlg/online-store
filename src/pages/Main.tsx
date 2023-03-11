@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from "styled-components";
 import ButtonComponent from "../components/ButtonComponent";
 
-const MainWrapper = styled.div`
+const MainWrapper = styled.main`
   height: 100vh;
   background: beige;
 `

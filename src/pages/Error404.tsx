@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Error404Wrapper = styled.h3`
+const Error404Wrapper = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 70px;
   height: 100vh;
   background: #f0fff1;
+  margin: 0;
 `
 
 export const Error404 = () => {
