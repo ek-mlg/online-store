@@ -4,14 +4,18 @@ import {path} from "../pages/Pages";
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
-  display: flex;
-  gap: 15px;
   background: lightskyblue;
   margin-right: 100px;
+  display: flex;
+  align-items: center;
+  
 `
 
 const StyledNavLink = styled(NavLink)`
   color: black;
+  background: coral;
+  margin: 20px;
+  cursor: pointer;
   &.active {
     color: red;
   }

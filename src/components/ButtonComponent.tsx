@@ -1,7 +1,7 @@
 import React from 'react';
 
 type ButtonPropsType = {
-    onClick?: ()=> void,
+    onClick: ()=> void,
     name: string
 }
 

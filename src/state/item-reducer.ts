@@ -4,33 +4,24 @@ export type ItemActionsType = ReturnType<typeof itemAC>
 
 export type ItemInitialStateType = typeof initialState
 
-export type TestType = {
-    items: ItemType[]
-}
-
-type ItemType = {
-    id: string, img: string, name: string, price: string, description: string
-}
-
 const initialState = {
-    products: {
-        items: [
-            {id: "1", img: img1, name: "iPhone 14 Pro Max", price: "1250$", description: "description1"},
-            {id: "2", img: img1, name: "item2", price: "460$", description: "description2"},
-            {id: "3", img: img1, name: "item3", price: "190$", description: "description3"},
-            {id: "4", img: img1, name: "item4", price: "100$", description: "description4"},
-            {id: "5", img: img1, name: "item5", price: "490$", description: "description5"},
-            {id: "6", img: img1, name: "item5", price: "490$", description: "description5"},
+    items: [
+        {id: "1", img: img1, name: "iPhone 14 Pro Max", price: 1200, description: "description1", addToBasket: false},
+        {id: "2", img: img1, name: "item2", price: 460, description: "description2", addToBasket: false},
+        {id: "3", img: img1, name: "item3", price: 190, description: "description3", addToBasket: false},
+        {id: "4", img: img1, name: "item4", price: 100, description: "description4", addToBasket: false},
+        {id: "5", img: img1, name: "item5", price: 490, description: "description5", addToBasket: false},
+        {id: "6", img: img1, name: "item6", price: 490, description: "description6", addToBasket: false},
 
-        ]
-    }
+    ],
 }
 
 export const ItemReducer = (state: ItemInitialStateType = initialState, action: ItemActionsType): ItemInitialStateType => {
 
     switch (action.type) {
 
-        case 'ITEM':
+        case 'ADD-TO-BASKET':
+
             return {
                 ...state
             }
@@ -41,6 +32,7 @@ export const ItemReducer = (state: ItemInitialStateType = initialState, action: 
 
 export const itemAC = () => {
     return {
-        type: "ITEM"
+        type: "ADD-TO-BASKET",
+
     } as const
 }

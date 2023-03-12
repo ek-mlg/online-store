@@ -1,5 +1,4 @@
 import React from 'react';
-import ButtonComponent from "./ButtonComponent";
 import styled from "styled-components";
 
 const ItemContainer = styled.div`
@@ -45,12 +44,15 @@ type ItemPropsType = {
     src: string,
     alt: string,
     name: string,
-    price: string,
-    description: string
+    price: number,
+    description: string,
 }
 
 const Item: React.FC<ItemPropsType> = (props) => {
+
     const {src, alt, name, price, description} = props
+
+
     return (
         <ItemContainer>
             <ImgContainer>
@@ -60,7 +62,6 @@ const Item: React.FC<ItemPropsType> = (props) => {
                 <Price>{price}</Price>
                 <Name>{name}</Name>
                 <span>{description}</span>
-                <ButtonComponent name={'Buy'}/>
             </InfoContainer>
         </ItemContainer>
     );
